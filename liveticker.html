@@ -1,0 +1,165 @@
+<!this is the stocks page>
+
+<html lang="en-US">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lightweight-charts@3.7.0/dist/lightweight-charts.standalone.production.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+  <script src="script.js" defer></script>
+  <link href = "https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-triton/resources/theme-triton-all.css" 
+         rel = "stylesheet" />
+  <script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"> </script>
+  <script src="https://kit.fontawesome.com/0160d053d6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <img src="https://cdn.glitch.me/eaebff2d-b47c-4358-8711-d81cf2ca28cb%2Fmaxresdefault.jpg?v=1639272613075" class = "main-logo"></img>
+   <h1>
+     Live Ticker
+   </h1>
+  </header>
+  <div class = "column-narrow" id = "nav">
+  
+  </div>
+  
+  <div class = "column-wide">
+  
+  <div id = "tickerSearch">
+  <h2>
+   Type to search ticker (EX: GME or AAPL) 
+  </h2>
+    <input name="search" id="search" type="text" placeholder="Search..">
+    <button type="button" onclick="getInputValue();">Search</button>
+  </div>
+    <div class="tradingview-widget-container">
+    <div id="tradingview_df77f"></div>
+      <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"></a></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+          var x = "NYSE:GME";
+          new TradingView.widget(
+          {
+            "width": 1200,
+            "height": 610,
+            "symbol": x,
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "2",
+            "locale": "en",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "allow_symbol_change": true,
+            "hide_top_toolbar": true,
+            "container_id": "tradingview_df77f"
+          }
+        );
+        </script>
+    </div>
+  <div id = "history"> 
+  </div>
+  
+  <main>
+   
+   
+  </main>
+  </div>
+  
+  
+</body>
+<footer>
+  <a class="fa fa-copyright"></a> Stonks, All Rights Reserved.
+  
+  <div class="contact-info">
+          <!-- Social media and contact links. Add or remove any networks. -->
+          <div>
+            <a class= "fa fa-reddit-alien" href="https://reddit.com/r/wallstreetbets" target="_blank"></a>
+            <a class= "fa fab fa-twitter" href="https://twitter.com/elonmusk" target="_blank"></a>
+          </div>
+        </div>
+</footer>
+</html>
+
+
+<script type = "text/javascript">
+  Ext.onReady(function() {
+    panel3=new Ext.Panel({
+      renderTo: 'nav',
+      width: 100,
+      height: 1000,
+      bodyStyle: "padding: 5px;",
+      html: 'Some content',
+      collapsible: true,
+      collapseDirection: Ext.Component.DIRECTION_LEFT,
+      bodyStyle:'border-color: black; background-color:#add8e6 !important;',
+      title: 'Navigation',
+      html: '<li><a href="index.html" title="Home"><h3>Home Page<h3></a></li><br><li><a href="liveticker.html" title="Ticker"><h3>Live Ticker<h3></a></li><br><li><a href="toppicks.html" title="Our Stock Picks"><h3>Stock Picks<h3></a></li><br><li><a href="cryptowatch.html" title="Crypto Projects to watch"><h3>Crypto<h3></a></li><br><li><a href="faq.html" title="Frequently Asked Questions"><h3>FAQ<h3></a></li><br><li><a href="glossary.html" title="Glossary of trading terms"><h3>Glossary<h3></a></li><br><li><a href="aboutus.html" title="About Us"><h3>About Us<h3></a></li><br>',
+            
+      });
+            
+  });
+</script>
+
+<script type = "text/javascript">
+var called = 1;
+
+function getInputValue(){
+  var temp = 'TICKERS:';
+  var inputVal = document.getElementById("search").value;
+  var x = inputVal;
+  new TradingView.widget(
+          {
+            "width": 1200,
+            "height": 610,
+            "symbol": x,
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "2",
+            "locale": "en",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "allow_symbol_change": true,
+            "hide_top_toolbar": true,
+            "container_id": "tradingview_df77f"
+          }
+        );
+  let newLength = hist.push(x)
+  let hist2 = hist[called];
+  
+  hist.forEach(function(item, index, array) {
+    temp = temp + ' ' + item;
+  })
+  panel1.body.update(temp);
+  called++;
+  
+}
+</script>
+
+<script type = "text/javascript">
+Ext.onReady(function() {
+    Ext.application({
+     name: 'Disclaimer',
+
+     launch: function () {
+         Ext.Msg.alert(this.getName(), 'We do not accept responsibility for any financial losses you may incur while using this website. Please invest responsibly.');
+     }
+     });
+            
+});
+</script>
+<script type = "text/javascript">
+let hist = ['GME'];
+let hist1 = hist[0];
+         Ext.onReady(function() {
+            panel1 = new Ext.Panel({
+               renderTo: 'history',
+               height: 100,
+               width: 1200,
+               title: 'Ticker Search History',
+               html: 'Nothing yet....',
+               
+            });
+         });
+</script>

@@ -1,0 +1,103 @@
+
+body{
+  /*background-color: #333;*/
+  /*background-color: #ADD8E6;*/
+}
+header{
+  background-color: #add8e6;
+  width: 99%;
+  float: right;
+  min-height: 225px;
+}
+footer{
+  background-color: #add8e6;
+  width: 99%;
+  min-height: 10%;
+  float: right;
+  text-align: center;
+  padding: 20px;
+}
+h1{
+  text-align: center;
+}
+p{
+  font-size: 15px;
+  margin-right: 200px;
+}
+.h1-liveticker
+{
+  margin-left: auto;
+}
+
+.column-narrow{
+  width: 1%; 
+  float : left;
+  min-height: 100%;
+  /*background-color: #333;*/
+  
+}
+.column-wide{
+  width: 90%; 
+  float:right; 
+  min-height: 60%;
+  
+}
+
+.main-logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 20%;
+  border-radius: 10%;
+}
+.bull{
+  width: 30%;
+  float: left;
+  padding-right: 15px;
+}
+
+li {
+  list-style-type : none;
+}
+
+#tickerSearch{
+  padding-left: 150px;
+}
+
+#history{
+  padding-left: 83px;
+}
+
+h3{
+  color: black;
+  padding: 5px;
+}
+
+.contact-info a{
+  padding: 10px; 
+  display: inline-block;
+}
+.elon{
+  width: 15%;
+  float: right;
+  padding-right: 30px;
+  padding-left: 15px;
+}
+.kevin{
+  width: 12%;
+  float: right;
+  padding-right: 30px;
+  padding-left: 15px;
+}
+.waren{
+  width: 12%;
+  float: left;
+  padding-right: 30px;
+  padding-left: 15px;
+}
+.faq{
+  display: block;
+  width: 5%;
+  border-radius: 10%;
+}

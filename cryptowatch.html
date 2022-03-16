@@ -1,0 +1,91 @@
+<!this is the crypto page> <! MIHER>
+
+<html lang="en-US">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+  <script src="script.js" defer></script>
+  <link href = "https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-triton/resources/theme-triton-all.css" 
+         rel = "stylesheet" />
+  <script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"> </script>
+  <script src="https://kit.fontawesome.com/0160d053d6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <img src="https://cdn.glitch.me/eaebff2d-b47c-4358-8711-d81cf2ca28cb%2Fmaxresdefault.jpg?v=1639272613075" class = "main-logo"></img>
+   <h1>
+     Crypto Watch
+   </h1>
+  </header>
+  <main>
+    <div class = "column-narrow" id = "nav"></div>
+  
+  <div class = "column-wide">
+    
+    <h2>
+      Bitcoin (BTC)
+    </h2>
+    <p>
+      Bitcoin is the largest crypto in the world. The cryptocurrency was invented in 2008 by an unknown organization names Satoshi Nakamoto. It fisrt began to be used when it was released as an open-source software. Bitcoin is known as the most popular crypto due to the fact that it has the highest market capitalization. People have mad millions investing in Bitcoin! The all-time high price of $64,800 per coin was reached on April 14, 2021.<b>Visit our <a href="liveticker.html">Live Ticker</a> to view the most current price of Bitcoin!</b>
+    </p>
+    <h2>
+      Ether (known more as Ethereum) (ETH)
+    </h2>
+    <p>
+      Ethereum was conceived in 2013 by a programmers named Vitalik Buterin, Gavin Wood, Charles Hoskinson, Anthony Di lorio, and Joseph Lubin. It first hit the market back on July 30th, 2015. Ether is the second most popular crypto being it has the second highest market capitalization. Ethereum had reached an all-time high of $4,811.37. <b>Visit our <a href="liveticker.html">Live Ticker</a> to view the most current price of Etheruem!</b>
+    </p>
+    <h2>
+      Litecoin (LTC)
+    </h2>
+    <p>
+      Litecoin was developed in October 2011 by Charlie Lee, as a spinoff or altcoin to Bitcoin. In technical details, Litecoin is identical to Bitcoin. The network went offically live on October 11th, 2011. The highest price per coin was achieved on December 11th, 2017 at $420 per coin. <b>Visit our <a href="liveticker.html">Live Ticker</a> to view the most current price of Litecoin!</b>
+    </p>
+    <h2>
+      Dogecoin (DOGE)
+    </h2>
+    <p>
+      Dogecoin is a cryptocurrency created by Billy Markus and Jackson Palmer, who decided to create Dogecoin as a joke. It soon became known as the 1st meme coin and the 1st dog coin. Dogecoin is based on Scrypt algorithm, and the transaction process is more convenient than Bitcoin. For example, Dogecoin takes 1 minute to confirm, when Bitcoin takes about 10 minutes. Dogecoin is very popular coin due to the fact that it speread around the world so fast. Famous people including Elon Musk are advocates of the coin, and caused to increase in price at a record breaking level. At the highest coin price, Dogecoin was worth $0.64! <b>Visit our <a href="liveticker.html">Live Ticker</a> to view the most current price of Dogecoin!</b>  
+    </p>
+    <h2>
+      Shiba Inu (SHIB)
+    </h2>
+    <p>
+      Shiba Inu was created in August 2020 by an anonymous person or being known as "Ryoshi". Named after the dog breed, Shiba Inu was created to be a Dogecoin killer. People who invested in Shiba made quite of bit of money as in early October 2021 its value increated 240% over the week. Dogecoins maximum price per coin was $0.00007957! <b>Visit our <a href="liveticker.html">Live Ticker</a> to view the most current price of Shiba Inu!</b>
+    </p>
+  </div>
+  </main>
+  
+  
+</body>
+<footer>
+  <a class="fa fa-copyright"></a> Stonks, All Rights Reserved.
+  
+  <div class="contact-info">
+          <!-- Social media and contact links. Add or remove any networks. -->
+          <div>
+            <a class= "fa fa-reddit-alien" href="https://reddit.com/r/wallstreetbets" target="_blank"></a>
+            <a class= "fa fab fa-twitter" href="https://twitter.com/elonmusk" target="_blank"></a>
+          </div>
+        </div>
+</footer>
+</html>
+
+<script type = "text/javascript">
+  Ext.onReady(function() {
+    panel3=new Ext.Panel({
+      renderTo: 'nav',
+      width: 100,
+      height: 900,
+      bodyStyle: "padding: 5px;",
+      html: 'Some content',
+      collapsible: true,
+      collapseDirection: Ext.Component.DIRECTION_LEFT,
+      bodyStyle:'border-color: black; background-color:#add8e6 !important;',
+      title: 'Navigation',
+      html: '<li><a href="index.html" title="Home"><h3>Home Page<h3></a></li><br><li><a href="liveticker.html" title="Ticker"><h3>Live Ticker<h3></a></li><br><li><a href="toppicks.html" title="Our Stock Picks"><h3>Stock Picks<h3></a></li><br><li><a href="cryptowatch.html" title="Crypto Projects to watch"><h3>Crypto<h3></a></li><br><li><a href="faq.html" title="Frequently Asked Questions"><h3>FAQ<h3></a></li><br><li><a href="glossary.html" title="Glossary of trading terms"><h3>Glossary<h3></a></li><br><li><a href="aboutus.html" title="About Us"><h3>About Us<h3></a></li><br>',
+            
+      });
+            
+  });
+</script>
